@@ -1,0 +1,18 @@
+.toggle-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .toggle-div {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+  .toggle {
+    font-size: 0.6rem !important;
+    padding: 0.5rem !important;
+  }
+}

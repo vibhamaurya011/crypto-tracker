@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #111;
+  --blue: #3a80e9;
+  --grey: #888;
+  --darkgrey: #1b1b1b;
+  --green: #61c96f;
+  --red: #f94141;
+}
+
+[data-theme="light"] {
+  --white: #ffffff;
+  --black: #111;
+  --grey: #888;
+  --darkgrey: #1b1b1b;
+}
+
+[data-theme="dark"] {
+  --white: #111;
+  --black: #fff;
+  --grey: #888;
+  --darkgrey: #f3f3f3;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--black);
+  /* cursor: url("https://uploads.codesandbox.io/uploads/user/b3e56831-8b98-4fee-b941-0e27f39883ab/Ad1_-cursor.png")
+      39 39,
+    auto; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  color: var(--white);
+}
+
+::selection {
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.2rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+  background: red;
+  transition: all 0.5s;
+} */
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white) !important;
+}
+
+.top-btn {
+  padding: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  background-color: var(--darkgrey);
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  border: 2px solid var(--blue);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.grey-container {
+  width: 90%;
+  display: block;
+  background-color: var(--darkgrey);
+  margin: 0.5rem auto;
+  padding: 1rem;
+  border-radius: 0.8rem;
+}
+
+.div-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  margin: 1rem 3rem;
+}
+
+.select-coin {
+  border-radius: 10rem !important;
+}
+
+.cursor {
+  position: fixed;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  pointer-events: none;
+  background-color: var(--blue);
+  z-index: 10000;
+  border: 2px solid var(--blue);
+  height: 0.3rem;
+  width: 0.3rem;
+  transition: all 400ms ease-out;
+}
+
+.cursor-pointer {
+  display: none;
+  position: fixed;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  pointer-events: none;
+  background-color: transparent;
+  z-index: 10000;
+  border: 2px solid var(--blue);
+  height: 2rem;
+  width: 2rem;
+  transition: all 350ms ease-out;
+} 
+
+@media only screen and (max-width: 800px) {
+  .cursor,
+  .cursor-pointer {
+    display: none;
+  }
+
+  .top-btn {
+    right: 0.5rem;
+    bottom: 0.5rem;
+  }
+
+  .grey-container {
+    background-color: var(--darkgrey);
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.8rem;
+  }
+
+  .div-flex {
+    gap: 0.5rem;
+    margin: 1rem 1rem;
+    justify-content: space-between;
+  }
+
+  .crypto-heading {
+    display: none;
+  }
+  .select-coin {
+    max-width: 120px !important;
+    font-size: 0.8rem !important;
+    padding: 0rem !important;
+    height: 35px !important;
+  }
+}

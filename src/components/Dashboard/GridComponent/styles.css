@@ -1,0 +1,138 @@
+.grid-box {
+  width: 180px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.25rem;
+  background-color: var(--darkgrey);
+  border-radius: 0.8rem;
+  padding: 2rem;
+  border: 2px solid var(--darkgrey);
+}
+
+.info-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.coin-logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.name-flex p {
+  margin: 0;
+  margin-bottom: 0.2rem;
+}
+
+.coin-symbol {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.coin-name {
+  font-size: 0.8rem;
+  color: var(--grey);
+}
+
+.coin-chip {
+  border: 2px solid var(--green);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--green);
+  min-width: 50px;
+  text-align: center;
+}
+
+.coin-chip:hover {
+  background-color: var(--green) !important;
+  border-color: var(--green) !important;
+  color: var(--white) !important;
+  transition: all 0.3s;
+}
+
+.chip-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon {
+  border: 2px solid var(--green);
+  padding: 0.35rem;
+  border-radius: 50%;
+  color: var(--green);
+}
+
+.icon:hover {
+  background-color: var(--green) !important;
+  border-color: var(--green) !important;
+  color: var(--white) !important;
+  transition: all 0.3s;
+}
+
+.coin-price {
+  margin: 0;
+  font-weight: 600;
+  color: var(--green);
+}
+
+.chip-red {
+  color: var(--red) !important;
+  border-color: var(--red) !important;
+}
+
+.chip-red:hover {
+  background-color: var(--red) !important;
+  border-color: var(--red) !important;
+  color: var(--white) !important;
+  transition: all 0.3s;
+}
+
+.volume-text {
+  font-size: 0.6rem;
+  margin-bottom: 0.2rem;
+  opacity: 0.8;
+}
+
+.grid-box:hover {
+  border: 2px solid var(--green);
+  transform: scale(1.05);
+  transition: all 0.3s;
+}
+
+.grid-box-red:hover {
+  transform: scale(1.05);
+  border: 2px solid var(--red);
+  transition: all 0.3s;
+}
+
+@media only screen and (max-width: 800px) {
+  .grid-box {
+    padding: 1.5rem;
+  }
+
+  .coin-chip {
+    min-width: 0px;
+    padding: 0.25rem 0.5rem;
+    border-width: 1px;
+  }
+  .icon {
+    border-width: 1px;
+    padding: 0.25rem;
+    font-size: 100% !important;
+  }
+  .chip-flex {
+    gap: 0.5rem;
+  }
+}
